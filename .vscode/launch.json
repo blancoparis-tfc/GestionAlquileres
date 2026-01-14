@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GestionAlquilerApplication<gestionAlquiler>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dbp.gestionAlquiler.GestionAlquilerApplication",
+            "projectName": "gestionAlquiler",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
