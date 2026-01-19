@@ -3,7 +3,7 @@
 Actúa como un experto en Spring Boot y Maven para implementar las siguientes tareas:
 
 ## 1. Configuración de Maven
-- Modifica el `pom.xml` para incluir el goal `build-info` dentro del `spring-boot-maven-plugin`. Esto es necesario para que `BuildProperties` esté disponible.
+- Modifica el `pom.xml` para incluir el goal `build-info` dentro del `spring-boot-maven-plugin` y pon un comentario indicando para que sirvre. Esto es necesario para que `BuildProperties` esté disponible.
 
 ## 2. Configuración de Base de Datos
 - En `application.properties`, configura una base de datos H2 en memoria.

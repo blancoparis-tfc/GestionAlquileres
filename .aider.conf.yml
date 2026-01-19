@@ -1,0 +1,16 @@
+# 1. Carga siempre el plan y los archivos estructurales
+read: ["plan.md", "instruciones.md", "pom.xml"]
+# 2. Añade automáticamente el código fuente al contexto de edición
+
+# 3. Forzar el mapeo del repositorio para que entienda las relaciones entre clases
+map-tokens: 1024
+
+# 4. (Opcional) Activar el modo arquitecto por defecto para mayor razonamiento
+architect: true
+
+
+# modelo
+model: ollama/qwen3-coder:30b
+
+# Opcional: Aumentar el tiempo de espera si el modelo local es lento procesando
+timeout: 600 
