@@ -1,88 +1,88 @@
-# Agent Guidelines for GestionAlquileres
+# Guías de Agente para GestionAlquileres
 
-This document provides guidelines for AI agents working on the GestionAlquileres Spring Boot application. It contains build commands, testing procedures, and code style guidelines to ensure consistency and quality.
+Este documento proporciona pautas para agentes de IA que trabajan en la aplicación Spring Boot GestionAlquileres. Contiene comandos de compilación, procedimientos de prueba y directrices de estilo de código para garantizar consistencia y calidad.
 
-## Project Overview
-- **Technology Stack**: Spring Boot 4.0.1, Java 25, Maven, JPA/Hibernate, H2 Database
-- **Package Structure**: `com.dbp.gestionAlquiler`
-- **Architecture**: REST API with JPA entities and Spring Boot auto-configuration
+## Visión General del Proyecto
+- **Pila Tecnológica**: Spring Boot 4.0.1, Java 25, Maven, JPA/Hibernate, Base de Datos H2
+- **Estructura del Paquete**: `com.dbp.gestionAlquiler`
+- **Arquitectura**: API REST con entidades JPA y configuración automática de Spring Boot
 
-## Build and Development Commands
+## Comandos de Compilación y Desarrollo
 
-### Build Commands
+### Comandos de Compilación
 ```bash
-# Compile the application
+# Compilar la aplicación
 mvn clean compile
 
-# Package the application into a JAR
+# Empaquetar la aplicación en un JAR
 mvn clean package
 
-# Run the application in development mode
+# Ejecutar la aplicación en modo de desarrollo
 mvn spring-boot:run
 
-# Generate build-info.properties (required for BuildProperties bean)
+# Generar build-info.properties (requerido para el bean BuildProperties)
 mvn spring-boot:build-info
 ```
 
-### Test Commands
+### Comandos de Prueba
 ```bash
-# Run all tests
+# Ejecutar todas las pruebas
 mvn test
 
-# Run a specific test class
+# Ejecutar una clase de prueba específica
 mvn test -Dtest=GestionAlquilerApplicationTests
 
-# Run a specific test method
+# Ejecutar un método de prueba específico
 mvn test -Dtest=GestionAlquilerApplicationTests#contextLoads
 
-# Run tests with verbose output
+# Ejecutar pruebas con salida detallada
 mvn test -DforkCount=1 -DreuseForks=false
 
-# Run tests and generate coverage report (if jacoco plugin is added)
+# Ejecutar pruebas y generar reporte de cobertura (si se agrega el plugin jacoco)
 mvn test jacoco:report
 
-# Run specific test with debug information
+# Ejecutar prueba específica con información de depuración
 mvn test -Dtest=StatusControllerTests -Ddebug=true
 ```
 
-### Code Quality Commands
+### Comandos de Calidad del Código
 ```bash
-# Check for compilation errors
+# Verificar errores de compilación
 mvn compile
 
-# Validate the project (compilation, tests, etc.)
+# Validar el proyecto (compilación, pruebas, etc.)
 mvn validate
 
-# Clean build artifacts
+# Limpiar artefactos de compilación
 mvn clean
 
-# Full clean build and test cycle
+# Ciclo completo de limpieza, compilación y prueba
 mvn clean compile test
 
-# Run specific maven goal to check dependencies
+# Ejecutar objetivo específico de maven para verificar dependencias
 mvn dependency:tree
 ```
 
-## Code Style Guidelines
+## Directrices de Estilo de Código
 
-### Package Structure
-- **Base Package**: `com.dbp.gestionAlquiler`
-- **Controllers**: `com.dbp.gestionAlquiler.controller`
-- **Entities/Models**: `com.dbp.gestionAlquiler.model`
-- **Services**: `com.dbp.gestionAlquiler.service` (when added)
-- **Repositories**: `com.dbp.gestionAlquiler.repository` (when added)
-- **Configuration**: `com.dbp.gestionAlquiler.config` (when added)
+### Estructura del Paquete
+- **Paquete Base**: `com.dbp.gestionAlquiler`
+- **Controladores**: `com.dbp.gestionAlquiler.controller`
+- **Entidades/Modelos**: `com.dbp.gestionAlquiler.model`
+- **Servicios**: `com.dbp.gestionAlquiler.service` (cuando se agreguen)
+- **Repositorios**: `com.dbp.gestionAlquiler.repository` (cuando se agreguen)
+- **Configuración**: `com.dbp.gestionAlquiler.config` (cuando se agreguen)
 
-### Naming Conventions
-- **Classes**: PascalCase (e.g., `StatusController`, `SystemLog`)
-- **Methods**: camelCase (e.g., `getStatus()`, `checkDatabaseConnection()`)
-- **Variables**: camelCase (e.g., `buildProperties`, `jdbcTemplate`)
-- **Constants**: UPPER_SNAKE_CASE (when used)
-- **Packages**: lowercase with dots (e.g., `com.dbp.gestionAlquiler.controller`)
+### Convenciones de Nomenclatura
+- **Clases**: PascalCase (por ejemplo, `StatusController`, `SystemLog`)
+- **Métodos**: camelCase (por ejemplo, `getStatus()`, `checkDatabaseConnection()`)
+- **Variables**: camelCase (por ejemplo, `buildProperties`, `jdbcTemplate`)
+- **Constantes**: UPPER_SNAKE_CASE (cuando se usen)
+- **Paquetes**: minúsculas con puntos (por ejemplo, `com.dbp.gestionAlquiler.controller`)
 
-### Class Structure and Annotations
+### Estructura de Clases y Anotaciones
 
-#### Controllers
+#### Controladores
 ```java
 @RestController
 @RequestMapping("/api")
@@ -96,22 +96,22 @@ public class StatusController {
 
     @GetMapping("/status")
     public ResponseEntity<StatusResponse> getStatus() {
-        // Implementation
+        // Implementación
     }
 
-    // Private helper methods
+    // Métodos auxiliares privados
     private boolean checkDatabaseConnection() {
-        // Implementation
+        // Implementación
     }
 
-    // Inner classes for response DTOs
+    // Clases internas para DTOs de respuesta
     public static class StatusResponse {
-        // Fields, constructor, getters/setters
+        // Campos, constructor, getters/setters
     }
 }
 ```
 
-#### Entities
+#### Entidades
 ```java
 @Entity
 @Table(name = "system_log")
@@ -124,33 +124,33 @@ public class SystemLog {
     @Column(name = "timestamp")
     private LocalDateTime timestamp;
 
-    // Default constructor
+    // Constructor por defecto
     public SystemLog() {
         this.timestamp = LocalDateTime.now();
     }
 
-    // Parameterized constructor
+    // Constructor con parámetros
     public SystemLog(Long id) {
         this.id = id;
         this.timestamp = LocalDateTime.now();
     }
 
-    // Getters and setters
+    // Getters y setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    // ... other getters/setters
+    // ... otros getters/setters
 }
 ```
 
-### Import Organization
-- **Spring Framework**: Group Spring imports together
-- **Java Standard Library**: Group java/jakarta imports
-- **Third-party Libraries**: Group external dependencies
-- **Project Classes**: Group internal imports
+### Organización de Importaciones
+- **Framework Spring**: Agrupar importaciones de Spring juntas
+- **Biblioteca Estándar de Java**: Agrupar importaciones java/jakarta
+- **Bibliotecas de Terceros**: Agrupar dependencias externas
+- **Clases del Proyecto**: Agrupar importaciones internas
 
-Example:
+Ejemplo:
 ```java
-// Spring imports
+// Importaciones de Spring
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.http.ResponseEntity;
@@ -159,26 +159,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// Jakarta/Java imports
+// Importaciones de Jakarta/Java
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-// Project imports
+// Importaciones del proyecto
 import com.dbp.gestionAlquiler.model.SystemLog;
 ```
 
-### Dependency Injection
-- Use `@Autowired` on fields (not constructor injection in existing code)
-- Prefer field injection for consistency with existing codebase
-- Inject services, repositories, and configuration beans as needed
+### Inyección de Dependencias
+- Usar `@Autowired` en campos (no en constructor en el código existente)
+- Preferir inyección por campo para mantener consistencia con la base de código existente
+- Inyectar servicios, repositorios y beans de configuración según sea necesario
 
-### Error Handling
-- Use try-catch blocks for database operations and external calls
-- Return appropriate HTTP status codes via ResponseEntity
-- Log errors appropriately (when logging framework is added)
-- Validate input parameters
+### Manejo de Errores
+- Usar bloques try-catch para operaciones de base de datos y llamadas externas
+- Devolver códigos de estado HTTP apropiados mediante ResponseEntity
+- Registrar errores adecuadamente (cuando se agregue un framework de registro)
+- Validar parámetros de entrada
 
-Example:
+Ejemplo:
 ```java
 private boolean checkDatabaseConnection() {
     try {
@@ -190,61 +190,61 @@ private boolean checkDatabaseConnection() {
 }
 ```
 
-### Database and JPA
-- Use `@Entity` for database entities
-- Use `@Table(name = "table_name")` for table mapping
-- Use `@Column(name = "column_name")` for column mapping
-- Use `@Id` and `@GeneratedValue` for primary keys
-- Use `LocalDateTime` for timestamp fields
-- Configure H2 for development/testing
+### Base de Datos y JPA
+- Usar `@Entity` para entidades de base de datos
+- Usar `@Table(name = "table_name")` para mapeo de tablas
+- Usar `@Column(name = "column_name")` para mapeo de columnas
+- Usar `@Id` y `@GeneratedValue` para claves primarias
+- Usar `LocalDateTime` para campos de marca temporal
+- Configurar H2 para desarrollo/pruebas
 
-### REST API Design
-- Use RESTful URL patterns (e.g., `/api/status`)
-- Return ResponseEntity with appropriate status codes
-- Use inner static classes for response DTOs
-- Follow JSON naming conventions (camelCase)
+### Diseño de API REST
+- Usar patrones de URL RESTful (por ejemplo, `/api/status`)
+- Devolver ResponseEntity con códigos de estado apropiados
+- Usar clases estáticas internas para DTOs de respuesta
+- Seguir convenciones de nomenclatura JSON (camelCase)
 
-### Code Formatting
-- Use 4 spaces for indentation
-- Place opening braces on the same line
-- Add blank lines between method definitions
-- Add comments for complex business logic
-- Keep line lengths reasonable (< 120 characters)
+### Formateo del Código
+- Usar 4 espacios para sangría
+- Colocar llaves de apertura en la misma línea
+- Agregar líneas en blanco entre definiciones de métodos
+- Agregar comentarios para lógica empresarial compleja
+- Mantener longitudes de línea razonables (< 120 caracteres)
 
-### Testing Guidelines
-- Use JUnit 5 (`@Test` annotation)
-- Use `@SpringBootTest` for integration tests
-- Test REST endpoints with TestRestTemplate (when added)
-- Test database operations with `@DataJpaTest` (when added)
-- Follow naming pattern: `ClassNameTests`
-- Test edge cases and error conditions
-- Use parameterized tests where appropriate
+### Directrices de Pruebas
+- Usar JUnit 5 (`@Test` anotación)
+- Usar `@SpringBootTest` para pruebas de integración
+- Probar puntos finales REST con TestRestTemplate (cuando se agreguen)
+- Probar operaciones de base de datos con `@DataJpaTest` (cuando se agreguen)
+- Seguir patrón de nombramiento: `ClassNameTests`
+- Probar casos límite y condiciones de error
+- Usar pruebas parametrizadas cuando sea apropiado
 
-### Configuration
-- Use `application.properties` for configuration
-- Configure database settings appropriately
-- Enable H2 console for development
-- Set JPA properties for schema management
+### Configuración
+- Usar `application.properties` para configuración
+- Configurar adecuadamente los ajustes de base de datos
+- Habilitar consola H2 para desarrollo
+- Establecer propiedades JPA para gestión de esquema
 
-### Security Considerations
-- Validate all input parameters
-- Use parameterized queries to prevent SQL injection
-- Avoid exposing sensitive information in logs
-- Follow principle of least privilege
+### Consideraciones de Seguridad
+- Validar todos los parámetros de entrada
+- Usar consultas parametrizadas para prevenir inyección SQL
+- Evitar exponer información sensible en registros
+- Seguir el principio del privilegio mínimo
 
-### Performance Best Practices
-- Use connection pooling (HikariCP configured automatically)
-- Avoid NX+1 query problems in JPA
-- Use appropriate indexes on frequently queried columns
-- Cache static data when appropriate
+### Mejores Prácticas de Rendimiento
+- Usar agrupación de conexiones (HikariCP configurado automáticamente)
+- Evitar problemas de consultas NX+1 en JPA
+- Usar índices apropiados en columnas frecuentemente consultadas
+- Almacenar datos estáticos en caché cuando sea apropiado
 
-### Documentation
-- Add JavaDoc comments for public APIs
-- Document complex business logic
-- Keep README.md updated with setup instructions
-- Document configuration properties
+### Documentación
+- Agregar comentarios JavaDoc para APIs públicas
+- Documentar lógica empresarial compleja
+- Mantener README.md actualizado con instrucciones de configuración
+- Documentar propiedades de configuración
 
-## File Organization
+## Organización de Archivos
 ```
 src/
 ├── main/
@@ -261,27 +261,27 @@ src/
         └── GestionAlquilerApplicationTests.java
 ```
 
-## Development Workflow
-1. **Setup**: Clone repository and run `mvn clean compile`
-2. **Development**: Make changes following style guidelines
-3. **Testing**: Run `mvn test` to ensure tests pass
-4. **Build**: Run `mvn clean package` for production build
-5. **Verification**: Run `mvn spring-boot:run` to test application
+## Flujo de Desarrollo
+1. **Configuración**: Clonar repositorio y ejecutar `mvn clean compile`
+2. **Desarrollo**: Hacer cambios siguiendo las directrices de estilo
+3. **Pruebas**: Ejecutar `mvn test` para asegurar que las pruebas pasen
+4. **Construcción**: Ejecutar `mvn clean package` para construcción de producción
+5. **Verificación**: Ejecutar `mvn spring-boot:run` para probar la aplicación
 
-## Common Issues and Solutions
-- **Build fails**: Check for syntax errors, ensure dependencies are available
-- **Tests fail**: Verify database configuration, check for port conflicts
-- **Application won't start**: Check application.properties, verify Java version
-- **Database connection issues**: Ensure H2 is properly configured
+## Problemas Comunes y Soluciones
+- **Falló la compilación**: Verificar errores de sintaxis, asegurarse de que las dependencias estén disponibles
+- **Fallan las pruebas**: Verificar configuración de base de datos, comprobar conflictos de puertos
+- **La aplicación no se inicia**: Verificar application.properties, verificar versión de Java
+- **Problemas de conexión a la base de datos**: Asegurarse de que H2 esté configurado correctamente
 
-## Version Information
+## Información de Versión
 - **Spring Boot**: 4.0.1
 - **Java**: 25
 - **Maven**: 3.9+
 - **JUnit**: 5 (Jupiter)
-- **H2 Database**: Latest compatible version
+- **Base de Datos H2**: Versión compatible más reciente
 
-## Cursor/Copilot Instructions
-No specific Cursor or Copilot rules found in this repository.
+## Instrucciones de Cursor/Copilot
+No se encontraron reglas específicas de Cursor o Copilot en este repositorio.
 
-This document should be updated as the project evolves and new patterns are established.
+Este documento debe actualizarse a medida que el proyecto evolucione y se establezcan nuevos patrones.
