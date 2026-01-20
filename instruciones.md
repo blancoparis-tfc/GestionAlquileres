@@ -27,11 +27,12 @@ Actúa como un experto en Spring Boot y Maven para implementar las siguientes ta
 
 ## 6. Crear entornos:
 
-- Variables de Entorno: Solicita que cree archivos .env.local, .env.dev, etc., para gestionar las credenciales de forma segura.
-- Aislamiento de Datos: De la BD.
+- Variables de Entorno: Solicita que cree un archivo, por cada entorno siguiendo las configuraciones estandar de spring..
+- Aislamiento de Datos:  De los datos de la BD,  que cada una tenga una BD separada de sqlite
+- Establezca por defecto el entorno sea el local
 - Propósito de cada entorno:
-* Local: Desarrollo individual en la máquina del programador.
-* Dev: Integración continua de código del equipo.
-* SIT (System Integration Testing): Verificación de integraciones entre módulos.
-* UAT (User Acceptance Testing): Pruebas finales de usuario con datos similares a producción.
-* Prod: Entorno real de producción.
+* local: Desarrollo individual en la máquina del programador.
+* dev: Integración continua de código del equipo.
+* sit (System Integration Testing): Verificación de integraciones entre módulos.
+* uat (User Acceptance Testing): Pruebas finales de usuario con datos similares a producción.
+* prod: Entorno real de producción.

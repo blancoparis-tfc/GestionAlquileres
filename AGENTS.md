@@ -3,7 +3,7 @@
 Este documento proporciona pautas para agentes de IA que trabajan en la aplicación Spring Boot GestionAlquileres. Contiene comandos de compilación, procedimientos de prueba y directrices de estilo de código para garantizar consistencia y calidad.
 
 ## Visión General del Proyecto
-- **Pila Tecnológica**: Spring Boot 4.0.1, Java 25, Maven, JPA/Hibernate, Base de Datos H2
+- **Pila Tecnológica**: Spring Boot 4.0.1, Java 25, Maven, JPA/Hibernate, Base de Datos Sqlite
 - **Estructura del Paquete**: `com.dbp.gestionAlquiler`
 - **Arquitectura**: API REST con entidades JPA y configuración automática de Spring Boot
 
