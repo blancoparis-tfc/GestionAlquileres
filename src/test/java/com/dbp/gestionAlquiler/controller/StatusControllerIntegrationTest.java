@@ -3,24 +3,32 @@ package com.dbp.gestionAlquiler.controller;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 @SpringBootTest
-@AutoConfigureMockMvc
+
 public class StatusControllerIntegrationTest {
 
+    @Autowired
+    private MockMvc mockMvc;
 
-    @Autowired MockMvc mvc;
     @Test
-    public void testStatusControllerIsAvailable() {
-        // Integration test that verifies StatusController can be loaded
-        // and the /api/status endpoint is properly configured
+    public void testStatusControllerIsAvailable() throws Exception {
+        mockMvc.perform(get("/api/status"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andExpect(jsonPath("$.nombre").exists())
+                .andExpect(jsonPath("$.version").exists())
+                .andExpect(jsonPath("$.status").value("OPERATIONAL"));
     }
 
     @Test
-    public void testDatabaseConnectivityCheck() {
-        // Test that validates the database connectivity check logic
-        // in the StatusController's getStatus() method
+    public void testDatabaseConnectivityCheck() throws Exception {
+        mockMvc.perform(get("/api/status"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.db_check").value(true));
     }
 }
