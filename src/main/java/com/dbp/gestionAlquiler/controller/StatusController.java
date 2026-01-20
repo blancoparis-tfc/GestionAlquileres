@@ -1,6 +1,5 @@
 package com.dbp.gestionAlquiler.controller;
 
-import com.dbp.gestionAlquiler.model.SystemLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.http.ResponseEntity;
