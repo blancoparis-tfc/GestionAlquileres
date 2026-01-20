@@ -27,9 +27,9 @@ Actúa como un experto en Spring Boot y Maven para implementar las siguientes ta
 
 ## 6. Crear entornos:
 
-- Variables de Entorno: Solicita que cree un archivo, por cada entorno siguiendo las configuraciones estandar de spring..
+- Variables de Entorno: Solicita que cree un archivo, por cada entorno siguiendo las configuraciones estandar de spring (application.properties, application-dev.properties ...).
 - Aislamiento de Datos:  De los datos de la BD,  que cada una tenga una BD separada de sqlite
-- Establezca por defecto el entorno sea el local
+- Establezca por defecto el entorno sea el local, usando la propiedad "spring.profiles.active"
 - Propósito de cada entorno:
 * local: Desarrollo individual en la máquina del programador.
 * dev: Integración continua de código del equipo.
