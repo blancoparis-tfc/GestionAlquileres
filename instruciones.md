@@ -24,3 +24,14 @@ Actúa como un experto en Spring Boot y Maven para implementar las siguientes ta
 ## 5. Requisitos de Código
 - Usa anotaciones de Lombok si están disponibles en el proyecto, si no, usa getters/setters estándar.
 - Asegúrate de que el código siga las convenciones de nombres de Java.
+
+## 6. Crear entornos:
+
+- Variables de Entorno: Solicita que cree archivos .env.local, .env.dev, etc., para gestionar las credenciales de forma segura.
+- Aislamiento de Datos: De la BD.
+- Propósito de cada entorno:
+* Local: Desarrollo individual en la máquina del programador.
+* Dev: Integración continua de código del equipo.
+* SIT (System Integration Testing): Verificación de integraciones entre módulos.
+* UAT (User Acceptance Testing): Pruebas finales de usuario con datos similares a producción.
+* Prod: Entorno real de producción.

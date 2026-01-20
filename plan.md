@@ -4,3 +4,4 @@
 - [x] **Paso 3**: Crear Entidad de persistencia para validar DB.
 - [x] **Paso 4**: Crear `StatusController` usando `BuildProperties`.
 - [x] **Paso 5**: Realizar test de integración del endpoint `/api/status`
+- [ ] **Paso 6**: Crear entornos
