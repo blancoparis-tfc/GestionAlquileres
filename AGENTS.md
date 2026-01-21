@@ -196,7 +196,7 @@ private boolean checkDatabaseConnection() {
 - Usar `@Column(name = "column_name")` para mapeo de columnas
 - Usar `@Id` y `@GeneratedValue` para claves primarias
 - Usar `LocalDateTime` para campos de marca temporal
-- Configurar H2 para desarrollo/pruebas
+- Configurar Sqlite para desarrollo/pruebas
 
 ### Diseño de API REST
 - Usar patrones de URL RESTful (por ejemplo, `/api/status`)
@@ -223,7 +223,7 @@ private boolean checkDatabaseConnection() {
 ### Configuración
 - Usar `application.properties` para configuración
 - Configurar adecuadamente los ajustes de base de datos
-- Habilitar consola H2 para desarrollo
+- Habilitar consola Sqlite para desarrollo
 - Establecer propiedades JPA para gestión de esquema
 
 ### Consideraciones de Seguridad
@@ -272,14 +272,14 @@ src/
 - **Falló la compilación**: Verificar errores de sintaxis, asegurarse de que las dependencias estén disponibles
 - **Fallan las pruebas**: Verificar configuración de base de datos, comprobar conflictos de puertos
 - **La aplicación no se inicia**: Verificar application.properties, verificar versión de Java
-- **Problemas de conexión a la base de datos**: Asegurarse de que H2 esté configurado correctamente
+- **Problemas de conexión a la base de datos**: Asegurarse de que Sqlite esté configurado correctamente
 
 ## Información de Versión
 - **Spring Boot**: 4.0.1
 - **Java**: 25
 - **Maven**: 3.9+
 - **JUnit**: 5 (Jupiter)
-- **Base de Datos H2**: Versión compatible más reciente
+- **Base de Datos SQlite**: Versión compatible más reciente
 
 ## Instrucciones de Cursor/Copilot
 No se encontraron reglas específicas de Cursor o Copilot en este repositorio.
