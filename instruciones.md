@@ -38,11 +38,10 @@ Actúa como un experto en Spring Boot y Maven para implementar las siguientes ta
 * prod: Entorno real de producción.
 
 # Tarea 7: Configuración de Dependencias (pom.xml)
-Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes incluir:
+Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes incluir si es necesario las siguientes dependencias:
 - Spring Boot Starter Test.
-- Testcontainers (PostgreSQL y JUnit Jupiter).
-- Java Faker o Bogus para datos aleatorios.
-- Asegúrate de usar los `<scope>test</scope>` correctos y versiones compatibles con 2026.
+- Java Faker  para datos aleatorios.
+- Asegúrate de usar los `<scope>test</scope>` correctos 
 
 
 # Tarea 8: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)

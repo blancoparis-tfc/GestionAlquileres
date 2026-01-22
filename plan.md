@@ -5,7 +5,7 @@
 - [x] **Paso 4**: Crear `StatusController` usando `BuildProperties`.
 - [x] **Paso 5**: Realizar test de integración del endpoint `/api/status`
 - [x] **Paso 6**: Crear entornos
-- [ ] **Paso 7**: Configuración de Dependencias (pom.xml)
+- [x] **Paso 7**: Configuración de Dependencias (pom.xml)
 - [ ] **Paso 8**: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)
 - [ ] **Paso 9**: Refactorización y Actualización de Tests
 
