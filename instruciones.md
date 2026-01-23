@@ -71,14 +71,13 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
 # Tarea 10: Crear la clase MockMvcBaseTest
 
    **MockMvcBaseTest**: Es la clase generica que vamos a utilizar para los pruebas unitarias de mvc.
+   - import: `import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc`
    - Anotaciones: `@AutoConfigureMockMvc`
-   - import: `org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc`
    - Herramienta: Inyecta `MockMvc` utiliza la anotacion `@autowired`.
    - Extiende de `SpringBootBaseTest`
    - No hay que poner `@SpringBootTest`en la clase, ya est en la herencia `SpringBootBaseTest`.
-   - Tiene que ser una clase abstract.
+   - Tiene que ser una clase abstracta.
    - Crea comentario en castellano explicando el uso de la clase.
-   -
 
 # Tarea 11: crear la clase AbstractIntegrationTest
 
