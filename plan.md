@@ -7,7 +7,7 @@
 - [x] **Paso 6**: Crear entornos
 - [x] **Paso 7**: Configuración de Dependencias (pom.xml)
 - [x] **Paso 8**: Crear la clase BaseTest.
-- [ ] **Paso 8**: Crear la clase SpringBootBaseTest.
+- [x] **Paso 9**: Crear la clase SpringBootBaseTest.
 - [ ] **Paso 10**: Crear la clase MockMvcTest
 - [ ] **Paso 11**: crear la clase IntegrationTest
 - [ ] **Paso 12**: Refactorización y Actualización de Tests

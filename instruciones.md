@@ -57,16 +57,21 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
 
 
 # Tarea 9: Crear la clase SpringBootBaseTest
-
- **SpringBootBaseTest**: Extiende la anterior (Capa de spring), donde se inicializa el contexto. 
+ 
+ **application-test.properties**: Configura el entorno para pruebas unit, creando el fichero.
+ 
+ **SpringBootBaseTest**: Extiende la anterior (Capa de spring). 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
-   - Tien que ser una clase abstract.
+   - Active el profile `sit` utilizando la anotación `@ActiveProfiles("sit")`. 
+   - Tiene que ser una clase abstract.
+   - Configurar el fichero de propiedades application-test.properties para configurar el entorno.
+   - Crea  comentarios en castellano explicando el uso de la clase.
 
 
 # Tarea 10: Crear la clase MockMvcTest
 
    **MockMvcTest**: Extiende de `SpringBootBaseTest`.
-   - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
+   - Herramienta: Inyecta `MockMvc`.
 
 # Tarea 11: crear la clase AbstractIntegrationTest
 
