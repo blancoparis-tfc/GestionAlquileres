@@ -44,7 +44,7 @@ Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes
 - Asegúrate de usar los `<scope>test</scope>` correctos 
 
 
-# Tarea 8: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)
+# Tarea 8: Generar Jerarquía de Clases Abstractas Generales (Arquitectura 2026)
 Pon la dependencia de jackson databind
 
 Crea las siguientes clases asegurando que el contexto de Spring no se duplique:
@@ -52,15 +52,17 @@ Crea las siguientes clases asegurando que el contexto de Spring no se duplique:
 1. **AbstractBaseTest**: Java puro. Incluye configuración de `Faker` para datos aleatorios y constantes globales.
 2. **AbstractSpringBootTest**: Extiende la anterior. 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
-3. **AbstractIntegrationTest**: Extiende de `AbstractSpringBootTest`.
+# Tarea 9 Crear la clase AbractMockMvcTest
+   **AbstractMockMvcTest**: Extiende de `AbstractSpringBootTest`.
+   - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
+# Tarea 10 crear la clase AbstractIntegrationTest
+ **AbstractIntegrationTest**: Extiende de `AbstractSpringBootTest`.
    - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
    - Anotaciones clase: `@AutoConfigureRestTestClient`
    - Herramienta: Inyecta `TestRestTemplate`.
    - Utilidad: Método `setupAuthHeaders(String token)` para peticiones protegidas.
-4. **AbstractMockMvcTest**: Extiende de `AbstractSpringBootTest`.
-   - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
-> Para Inyectar en spring utiliza la anotación @Autowired
-# Tarea 9: Refactorización y Actualización de Tests
+
+# Tarea 11: Refactorización y Actualización de Tests
 Analiza el código de mis clases de test actuales que te proporcionaré a continuación y realiza lo siguiente:
 1. Cambia la herencia: Haz que cada test herede de la clase abstracta correcta según su propósito (Integración o Mock).
 2. Limpieza: Elimina anotaciones redundantes como `@SpringBootTest`, `@ActiveProfiles` o `@AutoConfigureMockMvc` que ya están en las clases abstractas.

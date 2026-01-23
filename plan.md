@@ -7,7 +7,9 @@
 - [x] **Paso 6**: Crear entornos
 - [x] **Paso 7**: Configuración de Dependencias (pom.xml)
 - [ ] **Paso 8**: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)
-- [ ] **Paso 9**: Refactorización y Actualización de Tests
+- [ ] **Paso 9**: Crear la clase AbractMockMvcTest
+- [ ] **Paso 10**: crear la clase AbstractIntegrationTest
+- [ ] **Paso 11**: Refactorización y Actualización de Tests
 
 
 
