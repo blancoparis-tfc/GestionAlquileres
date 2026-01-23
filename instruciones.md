@@ -45,19 +45,21 @@ Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes
 
 
 # Tarea 8: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)
+Pon la dependencia de jackson databind
+
 Crea las siguientes clases asegurando que el contexto de Spring no se duplique:
 
 1. **AbstractBaseTest**: Java puro. Incluye configuración de `Faker` para datos aleatorios y constantes globales.
 2. **AbstractSpringBootTest**: Extiende la anterior. 
-   - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("test")`.
-   - Incluye: Configuración de `Testcontainers` para PostgreSQL (usando `@ServiceConnection` si está disponible) para que la base de datos sea real.
+   - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
 3. **AbstractIntegrationTest**: Extiende de `AbstractSpringBootTest`.
+   - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
+   - Anotaciones clase: `@AutoConfigureRestTestClient`
    - Herramienta: Inyecta `TestRestTemplate`.
    - Utilidad: Método `setupAuthHeaders(String token)` para peticiones protegidas.
 4. **AbstractMockMvcTest**: Extiende de `AbstractSpringBootTest`.
-   - Anotaciones: `@AutoConfigureMockMvc`.
    - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
-
+> Para Inyectar en spring utiliza la anotación @Autowired
 # Tarea 9: Refactorización y Actualización de Tests
 Analiza el código de mis clases de test actuales que te proporcionaré a continuación y realiza lo siguiente:
 1. Cambia la herencia: Haz que cada test herede de la clase abstracta correcta según su propósito (Integración o Mock).
