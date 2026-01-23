@@ -44,21 +44,21 @@ Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes
 - Asegúrate de usar los `<scope>test</scope>` correctos 
 
 
-# Tarea 8: Generar clases abractas ,AbstractBaseTest, AbstractSpringBootTest (Arquitectura 2026)
+# Tarea 8: Generar clases genericas ,BaseTest, SpringBootTest (Arquitectura 2026)
 
-Pon la dependencia de jackson databind
+Pon la dependencia de jackson databind, con version y en scope de `test`
 
 Crea las siguientes clases asegurando que el contexto de Spring no se duplique:
 
-1. **AbstractBaseTest**: Java puro. Incluye configuración de `Faker` para datos aleatorios y constantes globales.
-2. **AbstractSpringBootTest**: Extiende la anterior. 
+1. **BaseTest**: Java puro. Incluye configuración de `Faker` para datos aleatorios y constantes globales.
+2. **SpringBootTest**: Extiende la anterior. 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
 
-# Tarea 9: Crear la clase AbractMockMvcTest
-   **AbstractMockMvcTest**: Extiende de `AbstractSpringBootTest`.
+# Tarea 9: Crear la clase MockMvcTest
+   **MockMvcTest**: Extiende de `AbstractSpringBootTest`.
    - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
 # Tarea 10: crear la clase AbstractIntegrationTest
- **AbstractIntegrationTest**: Extiende de `AbstractSpringBootTest`.
+ **IntegrationTest**: Extiende de `AbstractSpringBootTest`.
    - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
    - Anotaciones clase: `@AutoConfigureRestTestClient`
    - Herramienta: Inyecta `TestRestTemplate`.
