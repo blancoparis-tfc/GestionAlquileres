@@ -56,18 +56,19 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
 
 
 
-# Tarea 9: Generar capa de utilidades,String de test ,SpringBootTest
+# Tarea 9: Crear la clase SpringBootBaseTest
 
  **SpringBootBaseTest**: Extiende la anterior (Capa de spring), donde se inicializa el contexto. 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
+   - Tien que ser una clase abstract.
 
 
-# Tarea 9: Crear la clase MockMvcTest
+# Tarea 10: Crear la clase MockMvcTest
 
    **MockMvcTest**: Extiende de `SpringBootBaseTest`.
    - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
 
-# Tarea 10: crear la clase AbstractIntegrationTest
+# Tarea 11: crear la clase AbstractIntegrationTest
 
  **IntegrationTest**: Extiende de `SpringBootBaseTest`.
    - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
@@ -75,7 +76,7 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
    - Herramienta: Inyecta `TestRestTemplate`.
    - Utilidad: Método `setupAuthHeaders(String token)` para peticiones protegidas.
 
-# Tarea 11: Refactorización y Actualización de Tests
+# Tarea 12: Refactorización y Actualización de Tests
 Analiza el código de mis clases de test actuales que te proporcionaré a continuación y realiza lo siguiente:
 1. Cambia la herencia: Haz que cada test herede de la clase abstracta correcta según su propósito (Integración o Mock).
 2. Limpieza: Elimina anotaciones redundantes como `@SpringBootTest`, `@ActiveProfiles` o `@AutoConfigureMockMvc` que ya están en las clases abstractas.
