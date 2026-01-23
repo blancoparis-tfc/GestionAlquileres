@@ -44,20 +44,32 @@ Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes
 - Asegúrate de usar los `<scope>test</scope>` correctos 
 
 
-# Tarea 8: Generar capa de utilidades,String de test ,BaseTest,SpringBootTest
+# Tarea 8: Crear la clase BaseTest.
 
 Pon la dependencia de jackson databind, con version y en scope de `test`
 
- **BaseTest**: Java puro (capa utilidades). Incluye configuración de `Faker` para datos aleatorios. No incluyas las anotaciones de test de Spring `SpringBootTest`. 
+ **BaseTest**: Java puro (capa utilidades). 
+   - Incluye configuración de `Faker` para datos aleatorios, en el idioma español `es`. 
+   - No incluyas las anotaciones de test de Spring `SpringBootTest`. 
+   - Tiene que ser una clase abstracta.
+   - Crea  comentarios en castellano explicando el uso de la clase. 
 
- **SpringBootTest**: Extiende la anterior (Capa de spring), donde se inicializa el contexto. 
+
+
+# Tarea 9: Generar capa de utilidades,String de test ,SpringBootTest
+
+ **SpringBootBaseTest**: Extiende la anterior (Capa de spring), donde se inicializa el contexto. 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
 
-# Tarea 10: Crear la clase MockMvcTest
-   **MockMvcTest**: Extiende de `AbstractSpringBootTest`.
+
+# Tarea 9: Crear la clase MockMvcTest
+
+   **MockMvcTest**: Extiende de `SpringBootBaseTest`.
    - Herramienta: Inyecta `MockMvc` y `ObjectMapper`.
-# Tarea 11: crear la clase AbstractIntegrationTest
- **IntegrationTest**: Extiende de `AbstractSpringBootTest`.
+
+# Tarea 10: crear la clase AbstractIntegrationTest
+
+ **IntegrationTest**: Extiende de `SpringBootBaseTest`.
    - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
    - Anotaciones clase: `@AutoConfigureRestTestClient`
    - Herramienta: Inyecta `TestRestTemplate`.
