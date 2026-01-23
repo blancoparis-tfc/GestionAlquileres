@@ -6,7 +6,7 @@
 - [x] **Paso 5**: Realizar test de integración del endpoint `/api/status`
 - [x] **Paso 6**: Crear entornos
 - [x] **Paso 7**: Configuración de Dependencias (pom.xml)
-- [ ] **Paso 8**: Generar capa de utilidades de test ,BaseTest
+- [x] **Paso 8**: Generar capa de utilidades de test ,BaseTest
 - [ ] **Paso 9**: Generar capa de spring de test ,SpringBootTest
 - [ ] **Paso 10**: Crear la clase MockMvcTest
 - [ ] **Paso 11**: crear la clase IntegrationTest

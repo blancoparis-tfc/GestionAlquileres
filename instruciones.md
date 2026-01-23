@@ -44,19 +44,13 @@ Identifica y genera el bloque de dependencias necesario para el `pom.xml`. Debes
 - Asegúrate de usar los `<scope>test</scope>` correctos 
 
 
-# Tarea 8: Generar capa de utilidades de test ,BaseTest
+# Tarea 8: Generar capa de utilidades,String de test ,BaseTest,SpringBootTest
 
 Pon la dependencia de jackson databind, con version y en scope de `test`
 
-Crea las siguientes clases asegurando que el contexto de Spring no se duplique:
+ **BaseTest**: Java puro (capa utilidades). Incluye configuración de `Faker` para datos aleatorios. No incluyas las anotaciones de test de Spring `SpringBootTest`. 
 
- **BaseTest**: Java puro. Incluye configuración de `Faker` para datos aleatorios y constantes globales.
-
-- Crear la constante, con el locale de España.
-- Crear la constante, con el entorno por defecto.
-
-# Tarea 9: Generar capa de spring de test ,SpringBootTest
- **SpringBootTest**: Extiende la anterior. 
+ **SpringBootTest**: Extiende la anterior (Capa de spring), donde se inicializa el contexto. 
    - Anotaciones: `@SpringBootTest`, `@ActiveProfiles("sit")`.
 
 # Tarea 10: Crear la clase MockMvcTest
