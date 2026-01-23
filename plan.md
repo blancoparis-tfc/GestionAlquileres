@@ -9,7 +9,7 @@
 - [x] **Paso 8**: Crear la clase BaseTest.
 - [x] **Paso 9**: Crear la clase SpringBootBaseTest.
 - [x] **Paso 10**: Crear la clase MockMvcTest
-- [ ] **Paso 11**: crear la clase IntegrationTest
+- [x] **Paso 11**: crear la clase IntegrationBaseTest
 - [ ] **Paso 12**: Refactorización y Actualización de Tests
 
 

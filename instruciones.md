@@ -79,14 +79,15 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
    - Tiene que ser una clase abstracta.
    - Crea comentario en castellano explicando el uso de la clase.
 
-# Tarea 11: crear la clase AbstractIntegrationTest
+# Tarea 11: crear la clase IntegrationBaseTest
 
  **IntegrationTest**: Extiende de `SpringBootBaseTest`.
    - importaciones: `org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient` cambia en spring 7.
    - Anotaciones clase: `@AutoConfigureRestTestClient`
-   - Herramienta: Inyecta `TestRestTemplate`.
+   - Herramienta: Inyecta `RestTestClient`.
    - Utilidad: Método `setupAuthHeaders(String token)` para peticiones protegidas.
-
+   - Tiene que ser una clase abstracta.
+> Ningun modelo ha sido capaz he tenido que poner el RestTestClient a mano.
 # Tarea 12: Refactorización y Actualización de Tests
 Analiza el código de mis clases de test actuales que te proporcionaré a continuación y realiza lo siguiente:
 1. Cambia la herencia: Haz que cada test herede de la clase abstracta correcta según su propósito (Integración o Mock).
