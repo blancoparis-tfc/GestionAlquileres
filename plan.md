@@ -6,7 +6,7 @@
 - [x] **Paso 5**: Realizar test de integración del endpoint `/api/status`
 - [x] **Paso 6**: Crear entornos
 - [x] **Paso 7**: Configuración de Dependencias (pom.xml)
-- [ ] **Paso 8**: Generar Jerarquía de Clases Abstractas (Arquitectura 2026)
+- [ ] **Paso 8**: Generar clases abractas ,AbstractBaseTest, AbstractSpringBootTest (Arquitectura 2026)
 - [ ] **Paso 9**: Crear la clase AbractMockMvcTest
 - [ ] **Paso 10**: crear la clase AbstractIntegrationTest
 - [ ] **Paso 11**: Refactorización y Actualización de Tests
