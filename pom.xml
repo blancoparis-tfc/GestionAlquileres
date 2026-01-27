@@ -43,7 +43,7 @@
 			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- Dependencia para H2 Database -->
+<!-- Dependencia para H2 Database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -57,6 +57,19 @@
 			<version>3.42.0.0</version>
 		</dependency>
 		
+		<!-- For Hibernate 7.x, we need to use the correct dialect -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>7.2.0.Final</version>
+        </dependency>
+
+<dependency>
+    <groupId>org.hibernate.orm</groupId>
+    <artifactId>hibernate-community-dialects</artifactId>
+    <version>7.2.0.Final</version>
+</dependency>
+
 		<!-- Dependencias para pruebas -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
