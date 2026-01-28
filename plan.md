@@ -11,5 +11,7 @@
 - [x] **Paso 10**: Crear la clase MockMvcTest
 - [x] **Paso 11**: crear la clase IntegrationBaseTest
 - [x] **Paso 12**: Realizar los cambios en StatusControllerIntegrationTest
+- [x] **Paso 13**: Refactorización y Actualización de StatusControllerTests
+- [ ] **Paso 14**: Refactorización y Actualización de GestionAlquilerApplicationTests
 
 
