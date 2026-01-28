@@ -88,8 +88,26 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
    - Utilidad: Método `setupAuthHeaders(String token)` para peticiones protegidas.
    - Tiene que ser una clase abstracta.
 > Ningun modelo ha sido capaz he tenido que poner el RestTestClient a mano.
-# Tarea 12: Refactorización y Actualización de Tests
-Analiza el código de mis clases de test actuales que te proporcionaré a continuación y realiza lo siguiente:
-1. Cambia la herencia: Haz que cada test herede de la clase abstracta correcta según su propósito (Integración o Mock).
-2. Limpieza: Elimina anotaciones redundantes como `@SpringBootTest`, `@ActiveProfiles` o `@AutoConfigureMockMvc` que ya están en las clases abstractas.
-3. Inyección: Elimina las declaraciones de `MockMvc` o `RestTemplate` locales, usando los atributos `protected` de las clases padre.
+# Tarea 12: realizar los cambios en StatusControllerIntegrationTest
+
+  Realiza en la siguiente clase `StatusControllerIntegrationTest` estos cambios: 
+    - Hereda de MockMvcBaseTest `com.dbp.gestionAlquiler.MockMvcBaseTest`
+    - Eliminando @SpringBootTest, @BeforeEach, WebApplicationContext y la configuración manual de MockMvc.
+    - Eliminar el atributo de `MockMvc`
+    - Actualiza en castellano los comentarios de la clase y metodos
+
+# Tarea 13: Refactorización y Actualización de StatusControllerTests
+
+   Realiza en la siguiente clase `StatusControllerTests`: 
+      - Hereda de IntegrationBaseTest
+      - Eliminando @SpringBootTest, @AutoConfigureRestTestClient y la inyección local de RestTestClient.
+      - Actualiza en castellano los comentarios de la clase y metodos
+
+
+# Tarea 14: Refactorización y Actualización de StatusControllerTests
+
+   Realiza en la siguiente clase `GestionAlquilerApplicationTests`: 
+      - Hereda de SpringBootBaseTest
+      - Eliminando @SpringBootTest.
+      - Actualiza en castellano los comentarios de la clase y metodos
+

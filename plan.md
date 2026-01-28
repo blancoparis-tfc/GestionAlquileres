@@ -10,7 +10,6 @@
 - [x] **Paso 9**: Crear la clase SpringBootBaseTest.
 - [x] **Paso 10**: Crear la clase MockMvcTest
 - [x] **Paso 11**: crear la clase IntegrationBaseTest
-- [ ] **Paso 12**: Refactorización y Actualización de Tests
-
+- [x] **Paso 12**: Realizar los cambios en StatusControllerIntegrationTest
 
 
