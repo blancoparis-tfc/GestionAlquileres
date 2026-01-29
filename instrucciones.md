@@ -110,4 +110,11 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
       - Hereda de SpringBootBaseTest
       - Eliminando @SpringBootTest.
       - Actualiza en castellano los comentarios de la clase y metodos
+# Tarea 15: Crear la funcionalidad inventario
 
+   Necesito que crees los ficheros necesarios de la funcionalidad descrita en el fichero `src/main/java/com/dbp/gestionAlquiler/modules/inventario/inventario.md`.
+   - Crear todos los clases necesarias para implementar la funcionalidad dentro del modulo de inventario.
+
+# Tarea 16: Crear los test funcionalidad inventario del paso 15
+
+   Crear el test correspondientes.
