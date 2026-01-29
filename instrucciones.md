@@ -115,6 +115,11 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
    Necesito que crees los ficheros necesarios de la funcionalidad descrita en el fichero `src/main/java/com/dbp/gestionAlquiler/modules/inventario/inventario.md`.
    - Crear todos los clases necesarias para implementar la funcionalidad dentro del modulo de inventario.
 
-# Tarea 16: Crear los test funcionalidad inventario del paso 15
+# M
+
+"Añade el módulo de Swagger/OpenAPI 3 a mi proyecto de Spring Boot 4. Usa la dependencia springdoc-openapi-starter-webmvc-ui. Configura la ruta de acceso a /swagger-ui.html y personaliza el bean de OpenAPI para incluir el título 'API de Mi Proyecto', versión '1.0' y una descripción breve. Genera también un ejemplo de cómo documentar un endpoint en un controlador usando las anotaciones @Operation y @ApiResponse."
+
+
+# Tarea 17: Crear los test funcionalidad inventario del paso 15
 
    Crear el test correspondientes.

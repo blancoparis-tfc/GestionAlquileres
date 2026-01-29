@@ -7,7 +7,7 @@ Este directorio contiene la implementación del módulo de inventario de la apli
 El módulo inventario sigue la misma estructura que los demás módulos del sistema:
 
 ```
-modules/inventory/
+modules/inventario/
 ├── controller/     # Controladores REST para el módulo de inventario
 ├── service/        # Lógica de negocio del módulo de inventario e interfaces
 ├── repository/     # Interfaces de acceso a datos/JPA para el módulo de inventario
@@ -17,11 +17,11 @@ modules/inventory/
 
 ## Propósito
 
-El módulo de inventario se encarga de gestionar el control y seguimiento del inventario de productos disponibles para alquiler. Incluye funcionalidades como:
+El módulo de inventario se encarga de gestionar el control y seguimiento del inventario de inmuebles disponibles para alquiler. Incluye funcionalidades como:
 
-- Registro y actualización de productos en inventario
-- Seguimiento de disponibilidad de productos
-- Gestión de cantidades disponibles
+- Registro y actualización de inmuebles en el inventario
+- Seguimiento de disponibilidad de inmuebles
+- Gestión de características de los inmuebles
 - Consultas sobre el estado del inventario
 
 ## Componentes Principales
@@ -40,6 +40,16 @@ Contiene las entidades de base de datos que representan los objetos del módulo 
 
 ### DTOs (dto/)
 Define los objetos de transferencia de datos utilizados en las comunicaciones entre capas.
+
+## Endpoints Disponibles
+
+El módulo expone los siguientes endpoints REST:
+
+- `GET /api/inventario/inmuebles` - Listar todos los inmuebles
+- `GET /api/inventario/inmuebles/{id}` - Obtener un inmueble por ID
+- `POST /api/inventario/inmuebles` - Crear nuevo inmueble
+- `PUT /api/inventario/inmuebles/{id}` - Actualizar un inmueble
+- `DELETE /api/inventario/inmuebles/{id}` - Eliminar un inmueble
 
 ## Uso Recomendado
 
