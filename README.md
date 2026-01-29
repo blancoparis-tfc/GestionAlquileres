@@ -30,3 +30,9 @@ Pequeña herramienta para gestionar alquileres
 - SpringBootBaseTest para pruebas de integración
 - MockMvcBaseTest para pruebas MVC
 - IntegrationBaseTest para pruebas de integración con RestTestClient
+
+### 5. Documentación API (Swagger/OpenAPI)
+- Implementada la documentación de la API usando Swagger/OpenAPI 3
+- Acceso a la interfaz de usuario en: `/swagger-ui.html`
+- Descarga del archivo OpenAPI JSON en: `/v3/api-docs`
+- Información detallada sobre los endpoints disponibles

@@ -14,6 +14,6 @@
 - [x] **Paso 13**: Refactorización y Actualización de StatusControllerTests
 - [x] **Paso 14**: Refactorización y Actualización de GestionAlquilerApplicationTests
 - [x] **Paso 15**: Crear la funcionalidad inventario
-- [ ] **Paso 16**: Añadir el Swagger/OpenAPI 3 
+- [x] **Paso 16**: Añadir el Swagger/OpenAPI 3 
 
 

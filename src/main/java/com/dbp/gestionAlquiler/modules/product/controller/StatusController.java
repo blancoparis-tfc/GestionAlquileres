@@ -1,5 +1,8 @@
 package com.dbp.gestionAlquiler.modules.product.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +22,20 @@ public class StatusController {
     private JdbcTemplate jdbcTemplate;
     
     @GetMapping("/status")
+    @Operation(
+        summary = "Obtener el estado de la aplicación",
+        description = "Este endpoint devuelve información sobre el estado actual de la aplicación, incluyendo su nombre, versión, estado y conexión a la base de datos."
+    )
+    @ApiResponses(value = {
+        @ApiResponse(
+            responseCode = "200", 
+            description = "Estado obtenido correctamente"
+        ),
+        @ApiResponse(
+            responseCode = "500", 
+            description = "Error interno del servidor"
+        )
+    })
     public ResponseEntity<StatusResponse> getStatus() {
         // Check database connection
         boolean dbCheck = checkDatabaseConnection();
