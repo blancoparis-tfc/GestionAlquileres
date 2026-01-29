@@ -1,4 +1,4 @@
-package com.dbp.gestionAlquiler.model;
+package com.dbp.gestionAlquiler.modules.user.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

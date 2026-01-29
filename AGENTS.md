@@ -245,20 +245,28 @@ private boolean checkDatabaseConnection() {
 - Documentar propiedades de configuración
 
 ## Organización de Archivos
-```
-src/
-├── main/
-│   ├── java/com/dbp/gestionAlquiler/
-│   │   ├── GestionAlquilerApplication.java
-│   │   ├── controller/
-│   │   │   └── StatusController.java
-│   │   └── model/
-│   │       └── SystemLog.java
-│   └── resources/
-│       └── application.properties
-└── test/
-    └── java/com/dbp/gestionAlquiler/
-        └── GestionAlquilerApplicationTests.java
+
+Vamos a utilizar un modulo Híbrida/Por Dominio para organizar nuestro código:
+
+```com/dbp/gestionAlquiler/
+│
+├── common (Utilidades globales, excepciones comunes)
+├── config (Seguridad, Beans de terceros, OpenAPI)
+│
+├── modules (o domains)
+│   ├── user
+│   │   ├── controller (RestControllers específicos de usuario)
+│   │   ├── service (Lógica de negocio de usuario e interfaces)
+│   │   ├── repository (Interfaces de acceso a datos/JPA)
+│   │   ├── model (Entidades de BD)
+│   │   └── dto (Objetos de transferencia para el API)
+│   │
+│   └── product
+│       ├── controller
+│       ├── service
+│       └── ...
+│
+└── Application.java (Clase principal en el root package)
 ```
 
 ## Flujo de Desarrollo
