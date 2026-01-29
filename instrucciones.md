@@ -120,6 +120,17 @@ Pon la dependencia de jackson databind, con version y en scope de `test`
 "Añade el módulo de Swagger/OpenAPI 3 a mi proyecto de Spring Boot 4. Usa la dependencia springdoc-openapi-starter-webmvc-ui. Configura la ruta de acceso a /swagger-ui.html y personaliza el bean de OpenAPI para incluir el título 'API de Mi Proyecto', versión '1.0' y una descripción breve. Genera también un ejemplo de cómo documentar un endpoint en un controlador usando las anotaciones @Operation y @ApiResponse."
 
 
-# Tarea 17: Crear los test funcionalidad inventario del paso 15
+# Tarea 17: Crear la clase test DataJpaBaseTest
 
-   Crear el test correspondientes.
+Genera una clase abstracta llamada DataJpaBaseTest siguiendo estas especificaciones técnicas:
+- Propósito: Servir como clase base para pruebas de persistencia con Spring Data JPA.
+- Herencia: Debe extender de SpringBootBaseTest (asume que ya existe).
+**Configuración**
+   - Utiliza la anotación @DataJpaTest para configurar el contexto de persistencia.
+   - Añade @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) para usar la base de datos real de configuración (o H2 si prefieres, especifícalo).
+- No incluyas @SpringBootTest, ya viene heredado.
+- Componentes: Inyecta mediante @Autowired los beans TestEntityManager y el repositorio genérico si fuera necesario.
+**Formato**
+- La clase debe ser abstract.
+- Incluye comentarios Javadoc en castellano explicando que esta clase centraliza la configuración de tests de integración de datos para evitar duplicidad de código.
+- Asegúrate de incluir todos los import necesarios.
