@@ -134,3 +134,8 @@ Genera una clase abstracta llamada DataJpaBaseTest siguiendo estas especificacio
 - La clase debe ser abstract.
 - Incluye comentarios Javadoc en castellano explicando que esta clase centraliza la configuración de tests de integración de datos para evitar duplicidad de código.
 - Asegúrate de incluir todos los import necesarios.
+
+# Tarea 18: Crear los recursos necesarios para los test.
+
+- Crea para la entidad inmueble,  de un piso en mostoles soto , en la calle Joaquin Blume 3 10 C, el fichero inmueble-test-data.sql
+- Añade el fichero a la anotación @Sql, para cargue los datos. En la clase `src/test/java/com/dbp/gestionAlquiler/config/DataJpaBaseTest.java`
