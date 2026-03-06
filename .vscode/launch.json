@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PdfUtility",
+            "request": "launch",
+            "mainClass": "com.dbp.gestionAlquiler.common.PdfUtility",
+            "projectName": "gestionAlquiler"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-GestionAlquilerApplication<gestionAlquiler>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

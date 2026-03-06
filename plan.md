@@ -16,7 +16,7 @@
 - [x] **Paso 15**: Crear la funcionalidad inventario
 - [x] **Paso 16**: Añadir el Swagger/OpenAPI 3 
 - [x] **Paso 17**: Crear la clase test DataJpaBaseTest
-- [ ] **Paso 18**: Crear los recursos necesarios para los test.
+- [ ] **Paso 18**: Crear un servicio que convierta los archivos pdf de un directorio en un formato de imagen:- [ ] 
 
 
 

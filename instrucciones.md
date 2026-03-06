@@ -135,7 +135,10 @@ Genera una clase abstracta llamada DataJpaBaseTest siguiendo estas especificacio
 - Incluye comentarios Javadoc en castellano explicando que esta clase centraliza la configuración de tests de integración de datos para evitar duplicidad de código.
 - Asegúrate de incluir todos los import necesarios.
 
-# Tarea 18: Crear los recursos necesarios para los test.
+# Tarea 18: Crear un servicio que convierta los archivos pdf de un directorio en un formato de imagen:
 
-- Crea para la entidad inmueble,  de un piso en mostoles soto , en la calle Joaquin Blume 3 10 C, el fichero inmueble-test-data.sql
-- Añade el fichero a la anotación @Sql, para cargue los datos. En la clase `src/test/java/com/dbp/gestionAlquiler/config/DataJpaBaseTest.java`
+- Descarga una dependencia de maven para convertir pdf en imagenes.
+- Crear un clase de utilidades de pdf.
+- En dicha clase crear un metodo que se le pasa la ruta del directorio, el formato de imagen y nos devuelva la lista de imagenes, con el mismo nombre del fichero.
+- Crear otro metodo que le pasemos la lista de imagenes y lo guarde fisicamente en un directorio.
+- Crear un tercer metodo que llame a los anteriores, que le pasemos el directorio donde estan los pdf y los guarde en el mismo directorio las imagenes convertidas.
